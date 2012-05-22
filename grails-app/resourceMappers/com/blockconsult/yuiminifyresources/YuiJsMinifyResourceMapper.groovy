@@ -1,6 +1,6 @@
 package com.blockconsult.yuiminifyresources
 
-import com.yahoo.platform.yui.compressor.JavaScriptCompressor
+import com.google.javascript.jscomp.*
 import org.grails.plugin.resource.mapper.MapperPhase
 
 class YuiJsMinifyResourceMapper {
@@ -24,20 +24,12 @@ class YuiJsMinifyResourceMapper {
     try {
       String encoding = config?.charset ?: 'UTF-8'
       if (log.debugEnabled) log.debug "Minifying Javascript file [$inputFile] to [$targetFile]"
-      JavaScriptCompressor compressor = null
-      inputFile.withReader(encoding) {
-        compressor = new JavaScriptCompressor(it, new YuiCompressorErrorReporter())
-      }
-      if (compressor) {
-        targetFile.withWriter(encoding) {
-          compressor.compress(it,
-              (config?.lineBreak ?: -1),
-              (config?.noMunge ?: false),
-              false, //non-verbose
-              (config?.preserveAllSemicolons ?: false),
-              (config?.disableOptimizations ?: false)
-          )
-        }
+      targetFile.withWriter(encoding) { writer ->
+        def compressor = new Compiler()
+        compressor.compile(SourceFile.fromFile(targetFile),
+                           SourceFile.fromFile(inputFile),
+                           new CompilerOptions())
+        writer.writeLine(compressor.toSource())
       }
       resource.processedFile = targetFile
       resource.updateActualUrlFromProcessedFile()
