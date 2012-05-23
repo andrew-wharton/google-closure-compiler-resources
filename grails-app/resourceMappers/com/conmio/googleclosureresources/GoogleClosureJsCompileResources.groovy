@@ -1,4 +1,4 @@
-package com.blockconsult.yuiminifyresources
+package com.conmio.googleclosureresources
 
 import com.google.javascript.jscomp.*
 import org.grails.plugin.resource.mapper.MapperPhase
