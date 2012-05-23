@@ -3,7 +3,7 @@ package com.conmio.googleclosureresources
 import com.google.javascript.jscomp.*
 import org.grails.plugin.resource.mapper.MapperPhase
 
-class YuiJsMinifyResourceMapper {
+class GoogleClosureJsCompileResources {
 
   def phase = MapperPhase.COMPRESSION
 
