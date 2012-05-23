@@ -3,6 +3,9 @@ plugin.xml
 *.iml
 .idea
 .DS_Store
+.classpath
+.settings
+.project
 dependencies.groovy
 target
 /stacktrace.log
