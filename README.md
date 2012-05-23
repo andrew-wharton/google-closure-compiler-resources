@@ -1,9 +1,9 @@
-This plugin integrates with Grails' resources framework to automatically
-compress javascript and css files using the YUI Compressor tool
-(http://developer.yahoo.com/yui/compressor/).
+This plugin integrates with Grails' [resources framework](https://github.com/grails-plugins/grails-resources) to automatically
+compress javascript using the Google Closure [compiler]
+(https://developers.google.com/closure/compiler/).
 
-By default, in this alpha, all files ending with .css and .js will be
-compressed all other files including files ending with .min.js or .min.css are
+By default, in this alpha, all files ending with .js will be
+compressed. All other files, including files ending with .min.js, are
 ignored.
 
-Read the plugin documentation at http://www.grails.org/plugin/yui-minify-resources for more details.
+This plugin is based on the [YUI minify resources](https://github.com/cblock/yui-minify-resources) plugin, and licensed under Apache License, Version 2.0.

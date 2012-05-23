@@ -2,7 +2,7 @@
 YUI Minify Resources Plugin
 ---------------------------
 
-Copyright [2011] Carsten Block
+Copyright [2012] Conmio Ltd
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,10 +18,19 @@ limitations under the License.
                                            
 
 -----------------------         
-YUI Compressor Library
+Google Closure Compiler Library
 -----------------------
 
-This plugin uses the YUI Compressor library to compress resources.
-YUI compressor is licensed under BSD license, which can be found at
+This plugin uses the Google Closure Compiler library to compress resources.
+Google Closure Compiler is licensed under Apache 2.0 license, which can be found at
 
-http://developer.yahoo.com/yui/license.html
+http://code.google.com/p/closure-compiler/
+
+---------------------------
+YUI Minify Resources Plugin
+---------------------------
+
+Parts of the code in this plugin are based on the YUI Minify Resources Plugin,
+which is released under Apache 2.0 license:
+
+https://github.com/cblock/yui-minify-resources/
