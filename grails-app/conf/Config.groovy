@@ -24,3 +24,12 @@ log4j = {
 }
 grails.views.default.codec="none" // none, html, base64
 grails.views.gsp.encoding="UTF-8"
+
+grails.resources.modules = {
+    top {
+        resource url:'/css/main.css'
+    }
+    bottom {
+        resource url:'/js/modernizr-2.5.3.js'
+    }
+}
