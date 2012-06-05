@@ -7,7 +7,7 @@ class ClosureCompilerResourcesGrailsPlugin {
   def dependsOn = [resources: '1.0 > *']
   def loadAfter = ['resources']
   def pluginExcludes = [
-      "grails-app/views/error.gsp",
+      "grails-app/views/**/*.*",
       "web-app/css/**/*.*",
       "web-app/js/**/*.*"
   ]
