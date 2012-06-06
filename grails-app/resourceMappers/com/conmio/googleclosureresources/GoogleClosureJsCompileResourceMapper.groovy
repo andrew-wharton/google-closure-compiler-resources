@@ -55,7 +55,7 @@ class GoogleClosureJsCompileResourceMapper {
     }
 
     private CompilationLevel getCompilationLevel() {
-        String level = grailsApplication.config.grails.resources.mappers.closurecompiler.compressionlevel ?: "default_to_SIMPLE_OPTIMIZATIONS"
+        String level = grailsApplication.config.grails.resources.mappers.closurecompiler.compilationlevel ?: "default_to_SIMPLE_OPTIMIZATIONS"
         switch (level) {
             case "WHITESPACE_ONLY":
                 return CompilationLevel.WHITESPACE_ONLY
