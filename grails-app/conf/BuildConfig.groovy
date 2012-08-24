@@ -24,9 +24,8 @@ grails.project.dependency.resolution = {
     //mavenRepo "http://repository.jboss.com/maven2/"
   }
   dependencies {
-    //Using mavenized version of yuicompressor causes String Index Out of Boumds exceptopm
-    //For details see report at: http://yuilibrary.com/projects/yuicompressor/ticket/2528114
-    //runtime 'com.yahoo.platform.yui:yuicompressor:2.4.6'
+    // r2079 is the latest, but faces compilation issues: https://groups.google.com/forum/?fromgroups=#!msg/closure-compiler-discuss/ldI6oA8BhTE/Mil26yu0gyIJ
+    runtime 'com.google.javascript:closure-compiler:r1918'
 
     // runtime 'mysql:mysql-connector-java:5.1.13'
   }
