@@ -2,7 +2,7 @@ class ClosureCompilerResourcesGrailsPlugin {
   // the plugin version
   def version = "1.0"
   // the version or versions of Grails the plugin is designed for
-  def grailsVersion = "1.2 > *"
+  def grailsVersion = "1.3 > *"
   // the other plugins this plugin depends on
   def dependsOn = [resources: '1.0 > *']
   def loadAfter = ['resources']
