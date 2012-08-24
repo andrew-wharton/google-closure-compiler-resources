@@ -1,5 +1,5 @@
 ---------------------------
-YUI Minify Resources Plugin
+Google Closure Minify Resources Plugin
 ---------------------------
 
 Copyright [2012] Conmio Ltd
