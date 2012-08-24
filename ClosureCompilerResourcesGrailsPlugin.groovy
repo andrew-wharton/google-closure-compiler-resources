@@ -21,6 +21,7 @@ class ClosureCompilerResourcesGrailsPlugin {
   def license = '''
 The plugin is licensed under Apache 2 license, see http://www.apache.org/licenses/LICENSE-2.0
 '''
+  def issueManagement = [ system: "github", url: "https://github.com/conmio/google-closure-compiler-resources/issues" ]
 
   def organization = [name: "Conmio Ltd", url: "http://www.conmio.com"]
   def scm = [url: "https://github.com/conmio/google-closure-compiler-resources"]
