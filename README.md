@@ -5,8 +5,8 @@ This plugin integrates with Grails' [resources framework](https://github.com/gra
 compress javascript using the Google Closure [compiler]
 (https://developers.google.com/closure/compiler/).
 
-The current version only supports minification and compilation of JavaScript files as part of static resources processing.
-Other features (such as CSS processing) of the Google Closure Compiler are not supported.
+The current version supports minification and compilation of JavaScript files as part of static resources processing.
+Other features (such as Linter or CSS processing) of Google Closure Tools are not supported.
 
 Settings
 --------
