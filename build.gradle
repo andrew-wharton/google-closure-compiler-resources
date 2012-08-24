@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+def zipFile = file("grails-${name}-${version}.zip")
+
+jar.enabled = false
+
+task setPluginVersionFromGradleProperties << {
+    projectDir.eachFileMatch(~/.*GrailsPlugin\.groovy$/) {
+	    // this part looks up the version number assignment and sneaks in whatever is declared in gradle.properties
+        def text = it.text
+        def matchVersionString = (text =~ /def\s*version\s+=\s+\"([^\"]*)\"/)
+        it.text = matchVersionString.replaceFirst("def version = \"${version}\"")
+    }
+}
+
+artifacts {
+    archives(zipFile) {
+        name rootProject.name
+    }
+}
